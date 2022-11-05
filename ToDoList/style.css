@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    background-image: url("images/background.webp"); /*백그라운드 이미지 가져옴*/
+    background-repeat: no-repeat; /*이미지가 반복되지 않게*/
+    background-size: cover; /*반복 되지 않은 이미지가 전체는 다 덮을 수 있도록*/
+}
+
+.container {
+    background-color: azure;
+    min-height: 100vh; /*vh = view height 내가 보는 화면의 높이만큼 100%의 vh를 쓰겠다*/
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.task-area /*테두리*/
+{
+    border: 1px solid lightgray;
+}
+
+.task-tabs 
+/*세 개의 탭들이 세로(디폴트값)로 있으니까 가로로 바꿔주기 위해 display:flex쓰려고 가져옴*/
+{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.task-tabs div
+/*task-tabs 아래에 있는 div에다가 공간을 줌*/
+{
+    padding:1em; 
+}
+
+#under-line
+{ 
+    height: 3px;
+    background-color: pink;
+    position: absolute;
+    width: 55px;
+    left: 0px;
+    top: 52px;
+    padding: 0px;
+}
+
+.task {
+    display: flex; /*check랑 delete를 가로로*/
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.task-done {
+    text-decoration: line-through;
+} /*텍스트에 밑줄 그어줌*/
+
+.task-tabs div {
+    cursor: pointer; /*마우스 올리면 커서가 손가락 모양으로 바뀐다*/
+}
